@@ -35,3 +35,13 @@ where g.address like '%Edinburgh%'
 group by 1, 2, 3
 order by 1, 2
 ```
+
+### 9. How busy are we? For each day of the week beginning 2016-11-25 show the number of bookings starting that day. Be sure to show all the days of the week in the correct order.
+
+```SQL
+select b.booking_date, count(distinct b.booking_id)
+from booking b 
+where booking_date between '2016-11-25' and '2016-12-01'
+group by 1
+order by 1
+```
