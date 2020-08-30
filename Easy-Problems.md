@@ -19,9 +19,9 @@ where booking_date = '2016-11-05'
 order by 1
 ```
 
-## 3. Look up daily rates. Give the daily rate that should be paid for bookings with ids 5152, 5165, 5154 and 5295. Include booking id, room type, number of occupants and the amount.
+### 3. Look up daily rates. Give the daily rate that should be paid for bookings with ids 5152, 5165, 5154 and 5295. Include booking id, room type, number of occupants and the amount.
 
-``SQL
+```SQL
 select b.booking_id, b.room_type_requested, b.occupants, r.amount
 from booking b
 left join rate r on b.room_type_requested = r.room_type and b.occupants = r.occupancy
