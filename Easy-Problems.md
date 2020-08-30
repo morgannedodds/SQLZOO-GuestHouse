@@ -11,7 +11,7 @@ group by 1
 
 ### 2. When do they get here? List the arrival time and the first and last names for all guests due to arrive on 2016-11-05, order the output by time of arrival.
 
-``SQL
+```SQL
 select b.arrival_time, g.first_name, g.last_name
 from booking b 
 left join guest g on guest_id = id
