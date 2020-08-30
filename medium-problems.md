@@ -8,7 +8,7 @@ from booking b
 inner join rate r on b.room_type_requested = r.room_type and b.occupants = r.occupancy
 inner join guest g on b.guest_id = g.id
 where g.first_name = 'Ruth' and g.last_name = 'Cadbury'
-``
+```
 
 ### 7. Including Extras. Calculate the total bill for booking 5346 including extras.
 
