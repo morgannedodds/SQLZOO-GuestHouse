@@ -24,3 +24,14 @@ inner join e
 on b.booking_id = e.booking_id
 where b.booking_id = 5346
 ```
+
+### 8. Edinburgh Residents. For every guest who has the word “Edinburgh” in their address show the total number of nights booked. Be sure to include 0 for those guests who have never had a booking. Show last name, first name, address and number of nights. Order by last name then first name.
+
+```SQL
+select g.last_name, g.first_name, g.address, sum(case when b.nights is null then 0 else b.nights end) as nights
+from booking b 
+right join guest g on b.guest_id = g.id 
+where g.address like '%Edinburgh%'
+group by 1, 2, 3
+order by 1, 2
+```
